@@ -1,0 +1,874 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F6F4941756B1A9299318AB7 /* Pods_WatchGPT_WatchGPTAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F48FC6E3BD00D1348D8C020 /* Pods_WatchGPT_WatchGPTAppUITests.framework */; };
+		449141B7256089614CD6FB7C /* Pods_WatchGPTAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */; };
+		B957B69F29C98AC100B43EA7 /* Pods_WatchGPT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */; };
+		B957B6A029C98AC100B43EA7 /* Pods_WatchGPT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B957B6A329C99E2500B43EA7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957B6A229C99E2500B43EA7 /* SettingsView.swift */; };
+		B9ADB61929C6CDD700F1D0A6 /* WatchGPTApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B9ADB61E29C6CDD700F1D0A6 /* WatchGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB61D29C6CDD700F1D0A6 /* WatchGPTApp.swift */; };
+		B9ADB62029C6CDD700F1D0A6 /* CompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB61F29C6CDD700F1D0A6 /* CompletionView.swift */; };
+		B9ADB62229C6CDD900F1D0A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ADB62129C6CDD900F1D0A6 /* Assets.xcassets */; };
+		B9ADB62529C6CDD900F1D0A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ADB62429C6CDD900F1D0A6 /* Preview Assets.xcassets */; };
+		B9ADB62F29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB62E29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift */; };
+		B9ADB63929C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */; };
+		B9ADB63B29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */; };
+		B9ADB64C29C6D8E100F1D0A6 /* OpenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64B29C6D8E100F1D0A6 /* OpenApi.swift */; };
+		B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9ADB61A29C6CDD700F1D0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9ADB60C29C6CDD700F1D0A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ADB61729C6CDD700F1D0A6;
+			remoteInfo = "watchgpt Watch App";
+		};
+		B9ADB62B29C6CDDA00F1D0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9ADB60C29C6CDD700F1D0A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ADB61729C6CDD700F1D0A6;
+			remoteInfo = "watchgpt Watch App";
+		};
+		B9ADB63529C6CDDA00F1D0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9ADB60C29C6CDD700F1D0A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ADB61729C6CDD700F1D0A6;
+			remoteInfo = "watchgpt Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B957B6A129C98AC100B43EA7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B957B6A029C98AC100B43EA7 /* Pods_WatchGPT.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB64129C6CDDA00F1D0A6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B9ADB61929C6CDD700F1D0A6 /* WatchGPTApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F48FC6E3BD00D1348D8C020 /* Pods_WatchGPT_WatchGPTAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPT_WatchGPTAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F16F5A0B5C261DB074F0DBE /* Pods-WatchGPTAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPTAppTests.release.xcconfig"; path = "Target Support Files/Pods-WatchGPTAppTests/Pods-WatchGPTAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		21962D2BB9BC6A3E0C984173 /* Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		534423930C56F1E0446941AA /* Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		76348A7271E473D7BD86A3FC /* Pods-WatchGPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPT/Pods-WatchGPT.debug.xcconfig"; sourceTree = "<group>"; };
+		81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPTAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPTAppTests/Pods-WatchGPTAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT.release.xcconfig"; path = "Target Support Files/Pods-WatchGPT/Pods-WatchGPT.release.xcconfig"; sourceTree = "<group>"; };
+		B957B6A229C99E2500B43EA7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B9ADB61229C6CDD700F1D0A6 /* WatchGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9ADB61D29C6CDD700F1D0A6 /* WatchGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTApp.swift; sourceTree = "<group>"; };
+		B9ADB61F29C6CDD700F1D0A6 /* CompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionView.swift; sourceTree = "<group>"; };
+		B9ADB62129C6CDD900F1D0A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9ADB62429C6CDD900F1D0A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9ADB62A29C6CDDA00F1D0A6 /* WatchGPTAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchGPTAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9ADB62E29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppTests.swift; sourceTree = "<group>"; };
+		B9ADB63429C6CDDA00F1D0A6 /* WatchGPTAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchGPTAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITests.swift; sourceTree = "<group>"; };
+		B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9ADB64B29C6D8E100F1D0A6 /* OpenApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenApi.swift; sourceTree = "<group>"; };
+		B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPTAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9ADB61529C6CDD700F1D0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB62729C6CDDA00F1D0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449141B7256089614CD6FB7C /* Pods_WatchGPTAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB63129C6CDDA00F1D0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6F4941756B1A9299318AB7 /* Pods_WatchGPT_WatchGPTAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9AB98B10A1B4D327F55978 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B957B69F29C98AC100B43EA7 /* Pods_WatchGPT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E7C6FCE68A4EA003BC418AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76348A7271E473D7BD86A3FC /* Pods-WatchGPT.debug.xcconfig */,
+				AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */,
+				21962D2BB9BC6A3E0C984173 /* Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig */,
+				534423930C56F1E0446941AA /* Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig */,
+				81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */,
+				1F16F5A0B5C261DB074F0DBE /* Pods-WatchGPTAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9ADB60B29C6CDD700F1D0A6 = {
+			isa = PBXGroup;
+			children = (
+				B9ADB61C29C6CDD700F1D0A6 /* WatchGPTApp */,
+				B9ADB62D29C6CDDA00F1D0A6 /* WatchGPTAppTests */,
+				B9ADB63729C6CDDA00F1D0A6 /* WatchGPTAppUITests */,
+				B9ADB61329C6CDD700F1D0A6 /* Products */,
+				5E7C6FCE68A4EA003BC418AC /* Pods */,
+				D931720BFC1D4BF2F94B1C5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B9ADB61329C6CDD700F1D0A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9ADB61229C6CDD700F1D0A6 /* WatchGPT.app */,
+				B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */,
+				B9ADB62A29C6CDDA00F1D0A6 /* WatchGPTAppTests.xctest */,
+				B9ADB63429C6CDDA00F1D0A6 /* WatchGPTAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9ADB61C29C6CDD700F1D0A6 /* WatchGPTApp */ = {
+			isa = PBXGroup;
+			children = (
+				B957B6A229C99E2500B43EA7 /* SettingsView.swift */,
+				B9ADB61D29C6CDD700F1D0A6 /* WatchGPTApp.swift */,
+				B9ADB61F29C6CDD700F1D0A6 /* CompletionView.swift */,
+				B9ADB62129C6CDD900F1D0A6 /* Assets.xcassets */,
+				B9ADB62329C6CDD900F1D0A6 /* Preview Content */,
+				B9ADB64B29C6D8E100F1D0A6 /* OpenApi.swift */,
+				B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */,
+			);
+			path = WatchGPTApp;
+			sourceTree = "<group>";
+		};
+		B9ADB62329C6CDD900F1D0A6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B9ADB62429C6CDD900F1D0A6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9ADB62D29C6CDDA00F1D0A6 /* WatchGPTAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9ADB62E29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift */,
+			);
+			path = WatchGPTAppTests;
+			sourceTree = "<group>";
+		};
+		B9ADB63729C6CDDA00F1D0A6 /* WatchGPTAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */,
+				B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */,
+			);
+			path = WatchGPTAppUITests;
+			sourceTree = "<group>";
+		};
+		D931720BFC1D4BF2F94B1C5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */,
+				0F48FC6E3BD00D1348D8C020 /* Pods_WatchGPT_WatchGPTAppUITests.framework */,
+				BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9ADB61129C6CDD700F1D0A6 /* WatchGPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9ADB64229C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPT" */;
+			buildPhases = (
+				0D046F31FBADB56A88BFDB10 /* [CP] Check Pods Manifest.lock */,
+				B9ADB61029C6CDD700F1D0A6 /* Resources */,
+				B9ADB64129C6CDDA00F1D0A6 /* Embed Watch Content */,
+				CC9AB98B10A1B4D327F55978 /* Frameworks */,
+				B957B6A129C98AC100B43EA7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9ADB61B29C6CDD700F1D0A6 /* PBXTargetDependency */,
+			);
+			name = WatchGPT;
+			productName = watchgpt;
+			productReference = B9ADB61229C6CDD700F1D0A6 /* WatchGPT.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		B9ADB61729C6CDD700F1D0A6 /* WatchGPTApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9ADB63E29C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTApp" */;
+			buildPhases = (
+				B9ADB61429C6CDD700F1D0A6 /* Sources */,
+				B9ADB61529C6CDD700F1D0A6 /* Frameworks */,
+				B9ADB61629C6CDD700F1D0A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchGPTApp;
+			productName = "watchgpt Watch App";
+			productReference = B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9ADB62929C6CDDA00F1D0A6 /* WatchGPTAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9ADB64529C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTAppTests" */;
+			buildPhases = (
+				380179A155A21C90393E3386 /* [CP] Check Pods Manifest.lock */,
+				B9ADB62629C6CDDA00F1D0A6 /* Sources */,
+				B9ADB62729C6CDDA00F1D0A6 /* Frameworks */,
+				B9ADB62829C6CDDA00F1D0A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9ADB62C29C6CDDA00F1D0A6 /* PBXTargetDependency */,
+			);
+			name = WatchGPTAppTests;
+			productName = "watchgpt Watch AppTests";
+			productReference = B9ADB62A29C6CDDA00F1D0A6 /* WatchGPTAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9ADB63329C6CDDA00F1D0A6 /* WatchGPTAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9ADB64829C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTAppUITests" */;
+			buildPhases = (
+				86FA80D08F8954E57115F336 /* [CP] Check Pods Manifest.lock */,
+				B9ADB63029C6CDDA00F1D0A6 /* Sources */,
+				B9ADB63129C6CDDA00F1D0A6 /* Frameworks */,
+				B9ADB63229C6CDDA00F1D0A6 /* Resources */,
+				7772B39A8FE6D5081DAB2572 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9ADB63629C6CDDA00F1D0A6 /* PBXTargetDependency */,
+			);
+			name = WatchGPTAppUITests;
+			productName = "watchgpt Watch AppUITests";
+			productReference = B9ADB63429C6CDDA00F1D0A6 /* WatchGPTAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9ADB60C29C6CDD700F1D0A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B9ADB61129C6CDD700F1D0A6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B9ADB61729C6CDD700F1D0A6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B9ADB62929C6CDDA00F1D0A6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B9ADB61729C6CDD700F1D0A6;
+					};
+					B9ADB63329C6CDDA00F1D0A6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B9ADB61729C6CDD700F1D0A6;
+					};
+				};
+			};
+			buildConfigurationList = B9ADB60F29C6CDD700F1D0A6 /* Build configuration list for PBXProject "WatchGPT" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9ADB60B29C6CDD700F1D0A6;
+			productRefGroup = B9ADB61329C6CDD700F1D0A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9ADB61129C6CDD700F1D0A6 /* WatchGPT */,
+				B9ADB61729C6CDD700F1D0A6 /* WatchGPTApp */,
+				B9ADB62929C6CDDA00F1D0A6 /* WatchGPTAppTests */,
+				B9ADB63329C6CDDA00F1D0A6 /* WatchGPTAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9ADB61029C6CDD700F1D0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB61629C6CDD700F1D0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9ADB62529C6CDD900F1D0A6 /* Preview Assets.xcassets in Resources */,
+				B9ADB62229C6CDD900F1D0A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB62829C6CDDA00F1D0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB63229C6CDDA00F1D0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D046F31FBADB56A88BFDB10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchGPT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		380179A155A21C90393E3386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchGPTAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7772B39A8FE6D5081DAB2572 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86FA80D08F8954E57115F336 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchGPT-WatchGPTAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9ADB61429C6CDD700F1D0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B957B6A329C99E2500B43EA7 /* SettingsView.swift in Sources */,
+				B9ADB62029C6CDD700F1D0A6 /* CompletionView.swift in Sources */,
+				B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */,
+				B9ADB64C29C6D8E100F1D0A6 /* OpenApi.swift in Sources */,
+				B9ADB61E29C6CDD700F1D0A6 /* WatchGPTApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB62629C6CDDA00F1D0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9ADB62F29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9ADB63029C6CDDA00F1D0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9ADB63B29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift in Sources */,
+				B9ADB63929C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9ADB61B29C6CDD700F1D0A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9ADB61729C6CDD700F1D0A6 /* WatchGPTApp */;
+			targetProxy = B9ADB61A29C6CDD700F1D0A6 /* PBXContainerItemProxy */;
+		};
+		B9ADB62C29C6CDDA00F1D0A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9ADB61729C6CDD700F1D0A6 /* WatchGPTApp */;
+			targetProxy = B9ADB62B29C6CDDA00F1D0A6 /* PBXContainerItemProxy */;
+		};
+		B9ADB63629C6CDDA00F1D0A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9ADB61729C6CDD700F1D0A6 /* WatchGPTApp */;
+			targetProxy = B9ADB63529C6CDDA00F1D0A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B9ADB63C29C6CDDA00F1D0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to transcribe you request to ChatGPT.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Used to transcribe you request to ChatGPT.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		B9ADB63D29C6CDDA00F1D0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to transcribe you request to ChatGPT.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Used to transcribe you request to ChatGPT.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		B9ADB63F29C6CDDA00F1D0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchGPTApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = watchgpt;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to transcribe you request to ChatGPT.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Used to transcribe you request to ChatGPT.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kennycason.watchgpt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		B9ADB64029C6CDDA00F1D0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchGPTApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = watchgpt;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to transcribe you request to ChatGPT.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Used to transcribe you request to ChatGPT.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kennycason.watchgpt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		B9ADB64329C6CDDA00F1D0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76348A7271E473D7BD86A3FC /* Pods-WatchGPT.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				INFOPLIST_KEY_CFBundleDisplayName = watchgpt;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kennycason.watchgpt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B9ADB64429C6CDDA00F1D0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				INFOPLIST_KEY_CFBundleDisplayName = watchgpt;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kennycason.watchgpt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9ADB64629C6CDDA00F1D0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kennycason.watchgpt-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchGPTApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)WatchGPTApp";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		B9ADB64729C6CDDA00F1D0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F16F5A0B5C261DB074F0DBE /* Pods-WatchGPTAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kennycason.watchgpt-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchGPTApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)WatchGPTApp";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		B9ADB64929C6CDDA00F1D0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21962D2BB9BC6A3E0C984173 /* Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kennycason.watchgpt-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "watchgpt Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		B9ADB64A29C6CDDA00F1D0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 534423930C56F1E0446941AA /* Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UU2HHXX83;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kennycason.watchgpt-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "watchgpt Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9ADB60F29C6CDD700F1D0A6 /* Build configuration list for PBXProject "WatchGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9ADB63C29C6CDDA00F1D0A6 /* Debug */,
+				B9ADB63D29C6CDDA00F1D0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9ADB63E29C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9ADB63F29C6CDDA00F1D0A6 /* Debug */,
+				B9ADB64029C6CDDA00F1D0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9ADB64229C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9ADB64329C6CDDA00F1D0A6 /* Debug */,
+				B9ADB64429C6CDDA00F1D0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9ADB64529C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9ADB64629C6CDDA00F1D0A6 /* Debug */,
+				B9ADB64729C6CDDA00F1D0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9ADB64829C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9ADB64929C6CDDA00F1D0A6 /* Debug */,
+				B9ADB64A29C6CDDA00F1D0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9ADB60C29C6CDD700F1D0A6 /* Project object */;
+}

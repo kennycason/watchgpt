@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "OpenApi.completions(completion:):OpenApi.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in OpenApi.completions(completion:):OpenApi.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "JSONDecoder().decode(CompletionResult.self, from: data)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

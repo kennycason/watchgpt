@@ -1,0 +1,11 @@
+Target dependency graph (5 targets)
+Alamofire in Pods, no dependencies
+Speech in Pods, no dependencies
+Pods-WatchGPT in Pods, depends on:
+Alamofire in Pods (explicit)
+Speech in Pods (explicit)
+Pods-WatchGPT-WatchGPTAppUITests in Pods, depends on:
+Alamofire in Pods (explicit)
+Speech in Pods (explicit)
+Pods-WatchGPTAppTests in Pods, depends on:
+Pods-WatchGPT in Pods (explicit)
