@@ -9,54 +9,66 @@ import Foundation
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     var body: some View {
         VStack {
             Text("Settings")
             MaxTokensTextField()
-                .environmentObject(openApi)
+                .environmentObject(openAi)
             ModelTextField()
-                .environmentObject(openApi)
+                .environmentObject(openAi)
             ApiKeyField()
-                .environmentObject(openApi)
+                .environmentObject(openAi)
             CearHistoryButton()
-                .environmentObject(openApi)
+                .environmentObject(openAi)
         }
     }
 }
 
 struct MaxTokensTextField: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     
     var body: some View {
-        TextField("Max Tokens", value: $openApi.maxTokens, format: .number)
+        LabeledContent {
+            TextField("", value: $openAi.maxTokens, format: .number)
+        } label: {
+            Text("Max Tokens")
+        }
     }
 }
 
 struct ModelTextField: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     
     var body: some View {
-        TextField("Model", text: $openApi.model)
+        LabeledContent {
+            TextField("", text: $openAi.model)
+        } label: {
+            Text("Model")
+        }
     }
 }
 
 
 struct ApiKeyField: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     
     var body: some View {
-        TextField("Api Key", text: $openApi.apiKey)
+        LabeledContent {
+            TextField("", text: $openAi.apiKey)
+        } label: {
+            Text("Api Key")
+        }
     }
 }
 
 
 struct CearHistoryButton: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     
     var body: some View {
         Button {
-            openApi.clearCompletionHistory()
+            openAi.clearCompletionHistory()
         } label: {
             Text("Clear History")
         }

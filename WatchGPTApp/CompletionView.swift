@@ -4,22 +4,22 @@
 import SwiftUI
 
 struct CompletionView: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     
     var body: some View {
         VStack(alignment: .leading) {
             CompletionInputView()
-                .environmentObject(openApi)
+                .environmentObject(openAi)
             
             CompletionHistoryView()
-                .environmentObject(openApi)
+                .environmentObject(openAi)
         }
         .frame(maxWidth: .infinity)
     }
 }
 
 struct CompletionInputView: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     @State var prompt: String = ""
     @State var isLoading: Bool = false
     
@@ -30,10 +30,9 @@ struct CompletionInputView: View {
                     print("prompt: \(prompt)")
                     if !prompt.isEmpty {
                         isLoading = true
-                        openApi.completions(
+                        openAi.completions(
                             prompt: prompt,
                             completion: { completionHistoryRecord in
-//                                self.history.insert(completionHistoryRecord, at: 0)
                                 self.prompt = ""
                                 self.isLoading = false
                             }
@@ -52,9 +51,9 @@ struct CompletionInputView: View {
 }
 
 struct CompletionHistoryView: View {
-    @EnvironmentObject var openApi: OpenApi
+    @EnvironmentObject var openAi: OpenAi
     var body: some View {
-        List(openApi.completionHistory) { record in
+        List(openAi.completionHistory) { record in
             CompletionHistoryRecordView(record: record)
         }
         .listStyle(.elliptical)

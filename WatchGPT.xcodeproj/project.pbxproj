@@ -20,7 +20,7 @@
 		B9ADB62F29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB62E29C6CDDA00F1D0A6 /* WatchGPTAppTests.swift */; };
 		B9ADB63929C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */; };
 		B9ADB63B29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */; };
-		B9ADB64C29C6D8E100F1D0A6 /* OpenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64B29C6D8E100F1D0A6 /* OpenApi.swift */; };
+		B9ADB64C29C6D8E100F1D0A6 /* OpenAi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */; };
 		B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +93,7 @@
 		B9ADB63429C6CDDA00F1D0A6 /* WatchGPTAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchGPTAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITests.swift; sourceTree = "<group>"; };
 		B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B9ADB64B29C6D8E100F1D0A6 /* OpenApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenApi.swift; sourceTree = "<group>"; };
+		B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAi.swift; sourceTree = "<group>"; };
 		B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPTAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +178,7 @@
 				B9ADB61F29C6CDD700F1D0A6 /* CompletionView.swift */,
 				B9ADB62129C6CDD900F1D0A6 /* Assets.xcassets */,
 				B9ADB62329C6CDD900F1D0A6 /* Preview Content */,
-				B9ADB64B29C6D8E100F1D0A6 /* OpenApi.swift */,
+				B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */,
 				B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */,
 			);
 			path = WatchGPTApp;
@@ -472,7 +472,7 @@
 				B957B6A329C99E2500B43EA7 /* SettingsView.swift in Sources */,
 				B9ADB62029C6CDD700F1D0A6 /* CompletionView.swift in Sources */,
 				B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */,
-				B9ADB64C29C6D8E100F1D0A6 /* OpenApi.swift in Sources */,
+				B9ADB64C29C6D8E100F1D0A6 /* OpenAi.swift in Sources */,
 				B9ADB61E29C6CDD700F1D0A6 /* WatchGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

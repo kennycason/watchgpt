@@ -6,14 +6,14 @@ import SwiftUI
 
 @main
 struct WatchGPTApp: App {
-    @StateObject private var openApi = OpenApi()
+    @StateObject private var openAi = OpenAi()
     var body: some Scene {
         WindowGroup {
             TabView {
                 CompletionView()
-                    .environmentObject(openApi)
+                    .environmentObject(openAi)
                 SettingsView()
-                    .environmentObject(openApi)
+                    .environmentObject(openAi)
             }
         }
     }
