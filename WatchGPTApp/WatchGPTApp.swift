@@ -10,6 +10,8 @@ struct WatchGPTApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
+                ChatCompletionView()
+                    .environmentObject(openAi)
                 CompletionView()
                     .environmentObject(openAi)
                 SettingsView()

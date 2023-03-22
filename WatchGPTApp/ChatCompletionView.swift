@@ -3,36 +3,36 @@
 //
 import SwiftUI
 
-struct CompletionView: View {
+struct ChatCompletionView: View {
     @EnvironmentObject var openAi: OpenAi
     
     var body: some View {
         VStack(alignment: .leading) {
-            CompletionInputView()
+            ChatCompletionInputView()
                 .environmentObject(openAi)
             
-            CompletionHistoryView()
+            ChatCompletionHistoryView()
                 .environmentObject(openAi)
         }
         .frame(maxWidth: .infinity)
     }
 }
 
-struct CompletionInputView: View {
+struct ChatCompletionInputView: View {
     @EnvironmentObject var openAi: OpenAi
     @State var prompt: String = ""
     @State var isLoading: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            TextField("Ask GPT3.0", text: $prompt)
+            TextField("Ask GPT3.5", text: $prompt)
                 .onChange(of: prompt) { newValue in
                     print("prompt: \(prompt)")
                     if !prompt.isEmpty {
                         isLoading = true
-                        openAi.completions(
+                        openAi.chatCompletions(
                             prompt: prompt,
-                            completion: { completionHistoryRecord in
+                            completion: { chatCompletionHistoryRecord in
                                 self.prompt = ""
                                 self.isLoading = false
                             }
@@ -50,28 +50,28 @@ struct CompletionInputView: View {
     }
 }
 
-struct CompletionHistoryView: View {
+struct ChatCompletionHistoryView: View {
     @EnvironmentObject var openAi: OpenAi
     var body: some View {
-        List(openAi.completionHistory) { record in
-            CompletionHistoryRecordView(record: record)
+        List(openAi.chatCompletionHistory) { record in
+            ChatCompletionHistoryRecordView(record: record)
         }
         .listStyle(.elliptical)
     }
 }
 
-struct CompletionHistoryRecordView: View {
-    var record: CompletionHistoryRecord
+struct ChatCompletionHistoryRecordView: View {
+    var record: ChatCompletionHistoryRecord
     var body: some View {
         VStack(alignment: .leading) {
-            Text(record.request.prompt)
+            Text(record.request.messages[0].content)
                 .fontWeight(.light)
                 .italic()
                 .foregroundColor(.white)
             
             Spacer(minLength: 5)
             
-            Text(record.response.choices[0].text.trimmingCharacters(in: ["\n", " "]))
+            Text(record.response.choices[0].message.content.trimmingCharacters(in: ["\n", " "]))
                 .fixedSize(horizontal: false, vertical: false)
         }
     }

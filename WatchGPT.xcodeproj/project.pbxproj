@@ -12,6 +12,7 @@
 		B957B69F29C98AC100B43EA7 /* Pods_WatchGPT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */; };
 		B957B6A029C98AC100B43EA7 /* Pods_WatchGPT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B957B6A329C99E2500B43EA7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957B6A229C99E2500B43EA7 /* SettingsView.swift */; };
+		B97714F229CAE52B003CD184 /* ChatCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97714F129CAE52B003CD184 /* ChatCompletionView.swift */; };
 		B9ADB61929C6CDD700F1D0A6 /* WatchGPTApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B9ADB61E29C6CDD700F1D0A6 /* WatchGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB61D29C6CDD700F1D0A6 /* WatchGPTApp.swift */; };
 		B9ADB62029C6CDD700F1D0A6 /* CompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB61F29C6CDD700F1D0A6 /* CompletionView.swift */; };
@@ -82,6 +83,7 @@
 		81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPTAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPTAppTests/Pods-WatchGPTAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT.release.xcconfig"; path = "Target Support Files/Pods-WatchGPT/Pods-WatchGPT.release.xcconfig"; sourceTree = "<group>"; };
 		B957B6A229C99E2500B43EA7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B97714F129CAE52B003CD184 /* ChatCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCompletionView.swift; sourceTree = "<group>"; };
 		B9ADB61229C6CDD700F1D0A6 /* WatchGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ADB61D29C6CDD700F1D0A6 /* WatchGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTApp.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				B9ADB62329C6CDD900F1D0A6 /* Preview Content */,
 				B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */,
 				B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */,
+				B97714F129CAE52B003CD184 /* ChatCompletionView.swift */,
 			);
 			path = WatchGPTApp;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				B9ADB62029C6CDD700F1D0A6 /* CompletionView.swift in Sources */,
 				B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */,
 				B9ADB64C29C6D8E100F1D0A6 /* OpenAi.swift in Sources */,
+				B97714F229CAE52B003CD184 /* ChatCompletionView.swift in Sources */,
 				B9ADB61E29C6CDD700F1D0A6 /* WatchGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

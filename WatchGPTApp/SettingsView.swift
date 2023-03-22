@@ -39,10 +39,19 @@ struct MaxTokensTextField: View {
 
 struct ModelTextField: View {
     @EnvironmentObject var openAi: OpenAi
-    
     var body: some View {
+        //        NavigationView {
+        //            Form {
+        
+//        Picker("", selection: $openAi.model) {
+//            ForEach(models, id: \.self) { model in
+//                Text(model)
+//
+//            }
+//        }
+        
         LabeledContent {
-            TextField("", text: $openAi.model)
+            TextField("", text: $openAi.completionModel)
         } label: {
             Text("Model")
         }
@@ -69,6 +78,7 @@ struct CearHistoryButton: View {
     var body: some View {
         Button {
             openAi.clearCompletionHistory()
+            openAi.clearChatCompletionHistory()
         } label: {
             Text("Clear History")
         }
