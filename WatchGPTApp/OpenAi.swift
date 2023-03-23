@@ -20,8 +20,8 @@ class OpenAi : ObservableObject {
     init(apiKey: String) {
         self.apiKey = apiKey
     }
-
-    func completions(prompt: String, completion:@escaping (CompletionHistoryRecord) -> ()) {
+    
+    func completions(prompt: String, completion:@escaping (CompletionHistoryRecord?) -> ()) {
         let url = URL(string: "https://api.openai.com/v1/completions")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -42,32 +42,18 @@ class OpenAi : ObservableObject {
         } catch {
             print(error)
         }
-
-        URLSession.shared.dataTask(with: request) { data, res, error in
-            do {
-                if let error = error {
-                    print("dataTaskWithURL fail: \(error.localizedDescription)")
-                }
-                else if let data = data {
-                    let completionResponse = try JSONDecoder().decode(CompletionResponse.self, from: data)
-                    print(completionResponse)
-                    DispatchQueue.main.async {
-                        let completionHistoryRecord = CompletionHistoryRecord(
-                            id: String(self.completionHistory.count),
-                            request: completionRequest,
-                            response: completionResponse
-                        )
-                        self.completionHistory.insert(completionHistoryRecord, at: 0)
-                        completion(completionHistoryRecord)
-                    }
-                }
-            } catch {
-                print(error)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            let historyRecord = self.buildCompletionHistory(request: completionRequest, response: response, data: data, error: error)
+            if historyRecord != nil {
+                self.completionHistory.insert(historyRecord!, at: 0)
             }
-        }.resume()
+            completion(historyRecord)
+        }
+        .resume()
     }
     
-    func chatCompletions(prompt: String, completion:@escaping (ChatCompletionHistoryRecord) -> ()) {
+    func chatCompletions(prompt: String, completion:@escaping (ChatCompletionHistoryRecord?) -> ()) {
         let url = URL(string: "https://api.openai.com/v1/chat/completions")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -93,29 +79,95 @@ class OpenAi : ObservableObject {
         } catch {
             print(error)
         }
-
-        URLSession.shared.dataTask(with: request) { data, res, error in
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            let historyRecord = self.buildChatCompletionHistory(request: completionRequest, response: response, data: data, error: error)
+            if historyRecord != nil {
+                self.chatCompletionHistory.insert(historyRecord!, at: 0)
+            }
+            completion(historyRecord)
+        }
+        .resume()
+    }
+    
+    private func buildCompletionHistory(
+        request: CompletionRequest,
+        response: URLResponse?,
+        data: Data?,
+        error: Error?
+    ) -> CompletionHistoryRecord? {
+        if let error = error {
+            print("dataTaskWithURL fail: \(error.localizedDescription)")
+            return CompletionHistoryRecord(
+                id: String(self.completionHistory.count),
+                request: request,
+                response: nil,
+                error: error.localizedDescription
+            )
+        }
+        else if let data = data {
+            if (response as! HTTPURLResponse).statusCode == 401 {
+                return CompletionHistoryRecord(
+                    id: String(self.completionHistory.count),
+                    request: request,
+                    response: nil,
+                    error: "Bad Token"
+                )
+            }
             do {
-                if let error = error {
-                    print("dataTaskWithURL fail: \(error.localizedDescription)")
-                }
-                else if let data = data {
-                    let completionResponse = try JSONDecoder().decode(ChatCompletionResponse.self, from: data)
-                    print(completionResponse)
-                    DispatchQueue.main.async {
-                        let completionHistoryRecord = ChatCompletionHistoryRecord(
-                            id: String(self.chatCompletionHistory.count),
-                            request: completionRequest,
-                            response: completionResponse
-                        )
-                        self.chatCompletionHistory.insert(completionHistoryRecord, at: 0)
-                        completion(completionHistoryRecord)
-                    }
-                }
+                let completionResponse = try JSONDecoder().decode(CompletionResponse.self, from: data)
+                print(completionResponse)
+                return CompletionHistoryRecord(
+                    id: String(self.completionHistory.count),
+                    request: request,
+                    response: completionResponse,
+                    error: nil
+                )
             } catch {
                 print(error)
             }
-        }.resume()
+        }
+        return nil
+    }
+    
+    private func buildChatCompletionHistory(
+        request: ChatCompletionRequest,
+        response: URLResponse?,
+        data: Data?,
+        error: Error?
+    ) -> ChatCompletionHistoryRecord? {
+        if let error = error {
+            print("dataTaskWithURL fail: \(error.localizedDescription)")
+            return ChatCompletionHistoryRecord(
+                id: String(self.chatCompletionHistory.count),
+                request: request,
+                response: nil,
+                error: error.localizedDescription
+            )
+        }
+        else if let data = data {
+            if (response as! HTTPURLResponse).statusCode == 401 {
+                return ChatCompletionHistoryRecord(
+                    id: String(self.chatCompletionHistory.count),
+                    request: request,
+                    response: nil,
+                    error: "Bad Token"
+                )
+            }
+            do {
+                let completionResponse = try JSONDecoder().decode(ChatCompletionResponse.self, from: data)
+                print(completionResponse)
+                return ChatCompletionHistoryRecord(
+                    id: String(self.chatCompletionHistory.count),
+                    request: request,
+                    response: completionResponse,
+                    error: nil
+                )
+            } catch {
+                print(error)
+            }
+        }
+        return nil
     }
     
     func clearCompletionHistory() {
@@ -128,10 +180,13 @@ class OpenAi : ObservableObject {
     
 }
 
-
+let chatCompletionModels = [
+    "gpt-3.5-turbo"
+]
 let completionModels = [
     "text-davinci-003"
 ]
+
 
 struct CompletionRequest: Codable {
     let model: String
@@ -139,7 +194,6 @@ struct CompletionRequest: Codable {
     let max_tokens: Int
     let temperature: Float
 }
-
 
 struct CompletionResponse: Codable {
     let id: String
@@ -158,16 +212,12 @@ struct CompletionChoice: Codable {
 struct CompletionHistoryRecord: Identifiable {
     let id: String
     let request: CompletionRequest
-    let response: CompletionResponse
+    let response: CompletionResponse?
+    let error: String?
 }
 
 
 // Chat GPT 3.5
-
-let chatCompletionModels = [
-    "gpt-3.5-turbo"
-]
-
 struct ChatCompletionRequest: Codable {
     let model: String
     let messages: [ChatCompletionMessage]
@@ -210,5 +260,6 @@ struct ChatCompletionChoiceMessage: Codable {
 struct ChatCompletionHistoryRecord: Identifiable {
     let id: String
     let request: ChatCompletionRequest
-    let response: ChatCompletionResponse
+    let response: ChatCompletionResponse?
+    let error: String?
 }

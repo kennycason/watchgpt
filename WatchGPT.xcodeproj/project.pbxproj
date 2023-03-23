@@ -18,7 +18,6 @@
 		B9ADB63929C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */; };
 		B9ADB63B29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */; };
 		B9ADB64C29C6D8E100F1D0A6 /* OpenAi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */; };
-		B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		B9ADB63829C6CDDA00F1D0A6 /* WatchGPTAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITests.swift; sourceTree = "<group>"; };
 		B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAi.swift; sourceTree = "<group>"; };
-		B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 				B9ADB62129C6CDD900F1D0A6 /* Assets.xcassets */,
 				B9ADB62329C6CDD900F1D0A6 /* Preview Content */,
 				B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */,
-				B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */,
 				B97714F129CAE52B003CD184 /* ChatCompletionView.swift */,
 			);
 			path = WatchGPTApp;
@@ -342,7 +339,6 @@
 			files = (
 				B957B6A329C99E2500B43EA7 /* SettingsView.swift in Sources */,
 				B9ADB62029C6CDD700F1D0A6 /* CompletionView.swift in Sources */,
-				B9ADB64E29C70B0800F1D0A6 /* SpeechRecognizer.swift in Sources */,
 				B9ADB64C29C6D8E100F1D0A6 /* OpenAi.swift in Sources */,
 				B97714F229CAE52B003CD184 /* ChatCompletionView.swift in Sources */,
 				B9ADB61E29C6CDD700F1D0A6 /* WatchGPTApp.swift in Sources */,

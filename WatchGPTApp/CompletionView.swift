@@ -71,8 +71,15 @@ struct CompletionHistoryRecordView: View {
             
             Spacer(minLength: 5)
             
-            Text(record.response.choices[0].text.trimmingCharacters(in: ["\n", " "]))
-                .fixedSize(horizontal: false, vertical: false)
+            if (record.error != nil) {
+                Text(record.error!)
+                    .fixedSize(horizontal: false, vertical: false)
+                    .foregroundColor(.red)
+            }
+            else if (record.response != nil) {
+                Text(record.response!.choices[0].text.trimmingCharacters(in: ["\n", " "]))
+                    .fixedSize(horizontal: false, vertical: false)
+            }
         }
     }
 }
