@@ -3,10 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "WatchGPTApp.body.getter:WatchGPTApp.swift">
+      </ContextState>
+      <ContextState
          contextName = "getOpenAiKey():WatchGPTApp.swift">
          <PersistentStrings>
             <PersistentString
                value = " Bundle.main.infoDictionary.key">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "getOpenAiKey2():WatchGPTApp.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Bundle.main.object(forInfoDictionaryKey: &quot;Config&quot;)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

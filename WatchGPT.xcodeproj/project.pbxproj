@@ -391,6 +391,7 @@
 /* Begin XCBuildConfiguration section */
 		B9ADB63C29C6CDDA00F1D0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B1B41029CC24A900ADCD6C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -453,6 +454,7 @@
 		};
 		B9ADB63D29C6CDDA00F1D0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B1B41029CC24A900ADCD6C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -600,7 +602,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to transcribe you request to ChatGPT.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Used to transcribe you request to ChatGPT.";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kennycason.watchgpt.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kennycason.watchgpt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;

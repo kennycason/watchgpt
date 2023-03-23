@@ -6,9 +6,9 @@ import SwiftUI
 
 @main
 struct WatchGPTApp: App {
-    @StateObject private var openAi = OpenAi(apiKey: "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")
+    @StateObject private var openAi = OpenAi(apiKey: "<API_KEY>")
     
-    private var testApiKey = getOpenAiKey()
+    private var info = Bundle.main.infoDictionary
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -21,10 +21,4 @@ struct WatchGPTApp: App {
             }
         }
     }
-}
-
-private func getOpenAiKey() -> String {
-    guard let infoDictionary: [String: Any] = Bundle.main.infoDictionary else { return "" }
-    guard let openApiKey: String = infoDictionary["OPEN_AI_KEY"] as? String else { return "" }
-    return openApiKey
 }
