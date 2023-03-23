@@ -6,7 +6,9 @@ import SwiftUI
 
 @main
 struct WatchGPTApp: App {
-    @StateObject private var openAi = OpenAi()
+    @StateObject private var openAi = OpenAi(apiKey: "<API_KEY>")
+    
+    private var info = Bundle.main.infoDictionary
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -20,4 +22,3 @@ struct WatchGPTApp: App {
         }
     }
 }
-

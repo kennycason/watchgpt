@@ -10,12 +10,16 @@ import Foundation
 //import Alamofire
 
 class OpenAi : ObservableObject {
-    @Published var apiKey: String = "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"
+    @Published var apiKey: String = ""
     @Published var maxTokens = 256
     @Published var completionModel = completionModels[0]
     @Published var completionHistory: [CompletionHistoryRecord] = [CompletionHistoryRecord]()
     @Published var chatCompletionModel = chatCompletionModels[0]
     @Published var chatCompletionHistory: [ChatCompletionHistoryRecord] = [ChatCompletionHistoryRecord]()
+    
+    init(apiKey: String) {
+        self.apiKey = apiKey
+    }
 
     func completions(prompt: String, completion:@escaping (CompletionHistoryRecord) -> ()) {
         let url = URL(string: "https://api.openai.com/v1/completions")!
