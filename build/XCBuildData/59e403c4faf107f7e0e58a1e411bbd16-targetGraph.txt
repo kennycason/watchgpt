@@ -1,0 +1,6 @@
+Target dependency graph (4 targets)
+Alamofire in Pods, no dependencies
+Pods-WatchGPT in Pods, depends on:
+Alamofire in Pods (explicit)
+Pods-WatchGPTAppTests in Pods, no dependencies
+Pods-WatchGPTAppUITests in Pods, no dependencies

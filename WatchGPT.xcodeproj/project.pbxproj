@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F6F4941756B1A9299318AB7 /* Pods_WatchGPT_WatchGPTAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F48FC6E3BD00D1348D8C020 /* Pods_WatchGPT_WatchGPTAppUITests.framework */; };
-		449141B7256089614CD6FB7C /* Pods_WatchGPTAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */; };
-		B957B69F29C98AC100B43EA7 /* Pods_WatchGPT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */; };
-		B957B6A029C98AC100B43EA7 /* Pods_WatchGPT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B957B6A329C99E2500B43EA7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957B6A229C99E2500B43EA7 /* SettingsView.swift */; };
 		B97714F229CAE52B003CD184 /* ChatCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97714F129CAE52B003CD184 /* ChatCompletionView.swift */; };
 		B9ADB61929C6CDD700F1D0A6 /* WatchGPTApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B9ADB61829C6CDD700F1D0A6 /* WatchGPTApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -56,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B957B6A029C98AC100B43EA7 /* Pods_WatchGPT.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,13 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F48FC6E3BD00D1348D8C020 /* Pods_WatchGPT_WatchGPTAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPT_WatchGPTAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F16F5A0B5C261DB074F0DBE /* Pods-WatchGPTAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPTAppTests.release.xcconfig"; path = "Target Support Files/Pods-WatchGPTAppTests/Pods-WatchGPTAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		21962D2BB9BC6A3E0C984173 /* Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		534423930C56F1E0446941AA /* Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		76348A7271E473D7BD86A3FC /* Pods-WatchGPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPT/Pods-WatchGPT.debug.xcconfig"; sourceTree = "<group>"; };
-		81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPTAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGPTAppTests/Pods-WatchGPTAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGPT.release.xcconfig"; path = "Target Support Files/Pods-WatchGPT/Pods-WatchGPT.release.xcconfig"; sourceTree = "<group>"; };
 		B957B6A229C99E2500B43EA7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B97714F129CAE52B003CD184 /* ChatCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCompletionView.swift; sourceTree = "<group>"; };
 		B9ADB61229C6CDD700F1D0A6 /* WatchGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,8 +85,7 @@
 		B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAi.swift; sourceTree = "<group>"; };
 		B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPTAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B1B41029CC24A900ADCD6C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449141B7256089614CD6FB7C /* Pods_WatchGPTAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F6F4941756B1A9299318AB7 /* Pods_WatchGPT_WatchGPTAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,26 +114,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B957B69F29C98AC100B43EA7 /* Pods_WatchGPT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E7C6FCE68A4EA003BC418AC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				76348A7271E473D7BD86A3FC /* Pods-WatchGPT.debug.xcconfig */,
-				AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */,
-				21962D2BB9BC6A3E0C984173 /* Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig */,
-				534423930C56F1E0446941AA /* Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig */,
-				81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */,
-				1F16F5A0B5C261DB074F0DBE /* Pods-WatchGPTAppTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		B9ADB60B29C6CDD700F1D0A6 = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +127,6 @@
 				B9ADB62D29C6CDDA00F1D0A6 /* WatchGPTAppTests */,
 				B9ADB63729C6CDDA00F1D0A6 /* WatchGPTAppUITests */,
 				B9ADB61329C6CDD700F1D0A6 /* Products */,
-				5E7C6FCE68A4EA003BC418AC /* Pods */,
-				D931720BFC1D4BF2F94B1C5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +152,7 @@
 				B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */,
 				B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */,
 				B97714F129CAE52B003CD184 /* ChatCompletionView.swift */,
+				B9B1B41029CC24A900ADCD6C /* Config.xcconfig */,
 			);
 			path = WatchGPTApp;
 			sourceTree = "<group>";
@@ -212,16 +182,6 @@
 			path = WatchGPTAppUITests;
 			sourceTree = "<group>";
 		};
-		D931720BFC1D4BF2F94B1C5D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DF3CA13FB390B2CEF0725209 /* Pods_WatchGPT.framework */,
-				0F48FC6E3BD00D1348D8C020 /* Pods_WatchGPT_WatchGPTAppUITests.framework */,
-				BF0490CF918DA8ECFA0FD1D2 /* Pods_WatchGPTAppTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,7 +189,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9ADB64229C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPT" */;
 			buildPhases = (
-				0D046F31FBADB56A88BFDB10 /* [CP] Check Pods Manifest.lock */,
 				B9ADB61029C6CDD700F1D0A6 /* Resources */,
 				B9ADB64129C6CDDA00F1D0A6 /* Embed Watch Content */,
 				CC9AB98B10A1B4D327F55978 /* Frameworks */,
@@ -266,7 +225,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9ADB64529C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTAppTests" */;
 			buildPhases = (
-				380179A155A21C90393E3386 /* [CP] Check Pods Manifest.lock */,
 				B9ADB62629C6CDDA00F1D0A6 /* Sources */,
 				B9ADB62729C6CDDA00F1D0A6 /* Frameworks */,
 				B9ADB62829C6CDDA00F1D0A6 /* Resources */,
@@ -285,11 +243,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9ADB64829C6CDDA00F1D0A6 /* Build configuration list for PBXNativeTarget "WatchGPTAppUITests" */;
 			buildPhases = (
-				86FA80D08F8954E57115F336 /* [CP] Check Pods Manifest.lock */,
 				B9ADB63029C6CDDA00F1D0A6 /* Sources */,
 				B9ADB63129C6CDDA00F1D0A6 /* Frameworks */,
 				B9ADB63229C6CDDA00F1D0A6 /* Resources */,
-				7772B39A8FE6D5081DAB2572 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -380,92 +336,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0D046F31FBADB56A88BFDB10 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WatchGPT-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		380179A155A21C90393E3386 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WatchGPTAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7772B39A8FE6D5081DAB2572 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchGPT-WatchGPTAppUITests/Pods-WatchGPT-WatchGPTAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86FA80D08F8954E57115F336 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WatchGPT-WatchGPTAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9ADB61429C6CDD700F1D0A6 /* Sources */ = {
@@ -577,7 +447,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.3;
 			};
 			name = Debug;
 		};
@@ -632,7 +502,7 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.3;
 			};
 			name = Release;
 		};
@@ -703,7 +573,6 @@
 		};
 		B9ADB64329C6CDDA00F1D0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76348A7271E473D7BD86A3FC /* Pods-WatchGPT.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -722,7 +591,6 @@
 		};
 		B9ADB64429C6CDDA00F1D0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA4557678D5C7AD526EA42BF /* Pods-WatchGPT.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -742,7 +610,6 @@
 		};
 		B9ADB64629C6CDDA00F1D0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81CFA00990C410A5DD45BB8D /* Pods-WatchGPTAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -764,7 +631,6 @@
 		};
 		B9ADB64729C6CDDA00F1D0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F16F5A0B5C261DB074F0DBE /* Pods-WatchGPTAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -787,7 +653,6 @@
 		};
 		B9ADB64929C6CDDA00F1D0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21962D2BB9BC6A3E0C984173 /* Pods-WatchGPT-WatchGPTAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -808,7 +673,6 @@
 		};
 		B9ADB64A29C6CDDA00F1D0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 534423930C56F1E0446941AA /* Pods-WatchGPT-WatchGPTAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

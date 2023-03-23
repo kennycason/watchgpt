@@ -1,0 +1,54 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98ba3679b4c4428e6a6d83c5308d3af99b"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e985c5bb8414d9f0bf4cbb1f2e4a29dfa42"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e986998e5c00d4248d2ae0973fbe1d79cb1"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98675e23d807eaa71c16202cd99ae35e77"
+    }
+  ],
+  "containerPath" : "/Users/kenny/code/watchgpt/Pods/Pods.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/kenny/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/kenny/Library/Developer/Xcode/DerivedData/Pods-bqstqrwsescmozctdsjyjjkqfcsl/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/kenny/Library/Developer/Xcode/DerivedData/Pods-bqstqrwsescmozctdsjyjjkqfcsl/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}
