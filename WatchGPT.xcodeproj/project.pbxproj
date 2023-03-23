@@ -85,7 +85,6 @@
 		B9ADB63A29C6CDDA00F1D0A6 /* WatchGPTAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGPTAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAi.swift; sourceTree = "<group>"; };
 		B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		B9B1B41029CC24A900ADCD6C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +151,6 @@
 				B9ADB64B29C6D8E100F1D0A6 /* OpenAi.swift */,
 				B9ADB64D29C70B0800F1D0A6 /* SpeechRecognizer.swift */,
 				B97714F129CAE52B003CD184 /* ChatCompletionView.swift */,
-				B9B1B41029CC24A900ADCD6C /* Config.xcconfig */,
 			);
 			path = WatchGPTApp;
 			sourceTree = "<group>";
@@ -391,7 +389,6 @@
 /* Begin XCBuildConfiguration section */
 		B9ADB63C29C6CDDA00F1D0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B1B41029CC24A900ADCD6C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -454,7 +451,6 @@
 		};
 		B9ADB63D29C6CDDA00F1D0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B1B41029CC24A900ADCD6C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
