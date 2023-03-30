@@ -1,23 +1,19 @@
-platform :watchos, '9.3'
+platform :ios, '9.3'
 
-workspace 'WatchGPT'
-use_frameworks!
-
-target 'WatchGPT' do
+target 'WatchGPTApp' do
   # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
 
-  # Pods for watchgpt
-  pod 'Alamofire'
-#  pod 'Speech'
+  # Pods for ArrivedWatch
+  pod 'Alamofire', '4.9.1'
 
-end
+  target 'WatchGPTAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
+  target 'WatchGPTAppUITests' do
+    # Pods for testing
+  end
 
-target 'WatchGPTAppTests' do
-  inherit! :search_paths
-  # Pods for testing
-end
-
-target 'WatchGPTAppUITests' do
-  # Pods for testing
 end

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Foundation
-//import Alamofire
+import Alamofire
 
 class OpenAi : ObservableObject {
     @Published var apiKey: String = ""
