@@ -39,56 +39,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DDF314F3-C728-4C0E-B3EB-ADBEDFA7DF03"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WatchGPTApp/OpenAi.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "chatCompletions(prompt:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DDF314F3-C728-4C0E-B3EB-ADBEDFA7DF03 - ea7be74e806a3a10"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WatchGPTApp.OpenAi.chatCompletions(prompt: Swift.String, completion: (WatchGPTApp.ChatCompletionHistoryRecord) -&gt; ()) -&gt; ()"
-                  moduleName = "WatchGPTApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kenny/code/watchgpt/WatchGPTApp/OpenAi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "2457">
-               </Location>
-               <Location
-                  uuid = "DDF314F3-C728-4C0E-B3EB-ADBEDFA7DF03 - bdeb18b8a09bf6a1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchGPTApp.OpenAi.chatCompletions(prompt: Swift.String, completion: (WatchGPTApp.ChatCompletionHistoryRecord) -&gt; ()) -&gt; ()"
-                  moduleName = "WatchGPTApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kenny/code/watchgpt/WatchGPTApp/OpenAi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "418">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2331E053-E48D-4BEA-9498-5A3B594F00A4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WatchGPTApp/CompletionView.swift"
@@ -103,31 +55,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC217C28-51FE-4E0F-8B41-D9648D5DEC80"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WatchGPTApp/ChatCompletionView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8EAE6DE2-379C-4975-B21E-BE15F32C155F"
-            shouldBeEnabled = "No"
+            uuid = "89F7963E-9BC0-4F5C-9BAD-368BFFA4037C"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WatchGPTApp/OpenAi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "chatCompletions(prompt:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,32 +71,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8FB8B745-02B4-43EB-8058-0F4062E55F0C"
+            uuid = "5D76C990-735B-462C-87EF-1771E17631CF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WatchGPTApp/OpenAi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "chatCompletions(prompt:completion:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "buildChatMessageHistory(prompt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89D9C389-89F4-4B3F-B3AC-EAA3342CB19A"
+            uuid = "FAE779DD-E6E9-4F1C-95DD-96F94E06C291"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WatchGPTApp/OpenAi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "chatCompletions(prompt:completion:)"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "buildChatMessageHistory(prompt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

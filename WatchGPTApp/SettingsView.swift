@@ -11,16 +11,22 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var openAi: OpenAi
     var body: some View {
-        VStack {
-            Text("Settings")
-            MaxTokensTextField()
-                .environmentObject(openAi)
-            ModelTextField()
-                .environmentObject(openAi)
-            ApiKeyField()
-                .environmentObject(openAi)
-            CearHistoryButton()
-                .environmentObject(openAi)
+        ScrollView {
+            VStack {
+                Text("Settings")
+                MaxTokensTextField()
+                    .environmentObject(openAi)
+                ChatCompletionsModelPicker()
+                    .environmentObject(openAi)
+                CompletionsModelPicker()
+                    .environmentObject(openAi)
+                ApiKeyField()
+                    .environmentObject(openAi)
+                PassChatHistoryField()
+                    .environmentObject(openAi)
+                CearHistoryButton()
+                    .environmentObject(openAi)
+            }
         }
     }
 }
@@ -37,24 +43,38 @@ struct MaxTokensTextField: View {
     }
 }
 
-struct ModelTextField: View {
+struct CompletionsModelPicker: View {
     @EnvironmentObject var openAi: OpenAi
+    
     var body: some View {
-        //        NavigationView {
-        //            Form {
-        
-//        Picker("", selection: $openAi.model) {
-//            ForEach(models, id: \.self) { model in
-//                Text(model)
-//
-//            }
-//        }
-        
         LabeledContent {
-            TextField("", text: $openAi.completionModel)
+            Picker("", selection: $openAi.completionModel) {
+                ForEach(COMPLETION_MODELS, id: \.self) { model in
+                    Text(model)
+                }
+            }
         } label: {
-            Text("Model")
+            Text("GPT3.0 Model")
         }
+        .padding(5)
+    }
+}
+
+
+struct ChatCompletionsModelPicker: View {
+    @EnvironmentObject var openAi: OpenAi
+    
+    var body: some View {
+        LabeledContent {
+            Picker("", selection: $openAi.chatCompletionModel) {
+                ForEach(CHAT_COMPLETION_MODELS, id: \.self) { model in
+                    Text(model)
+                }
+            }
+        } label: {
+            Text("GPT3.5 Model")
+        }
+        .padding(5)
     }
 }
 
@@ -68,6 +88,20 @@ struct ApiKeyField: View {
         } label: {
             Text("Api Key")
         }
+    }
+}
+
+
+struct PassChatHistoryField: View {
+    @EnvironmentObject var openAi: OpenAi
+    
+    var body: some View {
+        LabeledContent {
+            Toggle("", isOn: $openAi.passChatHistory)
+        } label: {
+            Text("Pass History")
+        }
+        .padding(5)
     }
 }
 

@@ -25,7 +25,7 @@ struct ChatCompletionInputView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            TextField("Ask GPT3.5", text: $prompt)
+            TextField("Chat w/ GPT3.5", text: $prompt)
                 .onChange(of: prompt) { newValue in
                     print("prompt: \(prompt)")
                     if !prompt.isEmpty {
@@ -40,8 +40,9 @@ struct ChatCompletionInputView: View {
                     }
                 }
             
-            Group {
-                if isLoading {
+            
+            if isLoading {
+                Group {
                     Text("Loading...")
                         .bold()
                 }
