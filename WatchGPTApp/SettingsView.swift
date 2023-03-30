@@ -72,7 +72,7 @@ struct ChatCompletionsModelPicker: View {
                 }
             }
         } label: {
-            Text("GPT3.5 Model")
+            Text("GPT3.5+ Model")
         }
         .padding(5)
     }
