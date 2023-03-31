@@ -1,0 +1,6 @@
+framework module Pods_WatchGPTApp_WatchGPTAppUITests {
+  umbrella header "Pods-WatchGPTApp-WatchGPTAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

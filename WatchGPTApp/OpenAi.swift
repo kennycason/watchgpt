@@ -7,95 +7,135 @@
 
 import SwiftUI
 import Foundation
-//import Alamofire
+import Alamofire
 
 class OpenAi : ObservableObject {
     @Published var apiKey: String = ""
     @Published var maxTokens = 256
-    @Published var completionModel = completionModels[0]
+    
+    @Published var completionModel = COMPLETION_MODEL_DEFAULT
     @Published var completionHistory: [CompletionHistoryRecord] = [CompletionHistoryRecord]()
-    @Published var chatCompletionModel = chatCompletionModels[0]
+    
+    @Published var passChatHistory = true
+    @Published var chatCompletionModel = CHAT_COMPLETION_MODEL_DEFAULT
     @Published var chatCompletionHistory: [ChatCompletionHistoryRecord] = [ChatCompletionHistoryRecord]()
     
-    init(apiKey: String) {
+    init(apiKey: String,
+         chatCompletionModel: String = CHAT_COMPLETION_MODEL_DEFAULT,
+         completionModel: String = COMPLETION_MODEL_DEFAULT
+    ) {
         self.apiKey = apiKey
+        self.chatCompletionModel = chatCompletionModel
+        self.completionModel = completionModel
     }
     
     func completions(prompt: String, completion:@escaping (CompletionHistoryRecord?) -> ()) {
-        let url = URL(string: "https://api.openai.com/v1/completions")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
         let completionRequest = CompletionRequest(
             model: completionModel,
             prompt: prompt,
             max_tokens: maxTokens,
             temperature: 0
         )
-        do {
-            let requestJsonData = try JSONEncoder().encode(completionRequest)
-            let str = String(data: requestJsonData, encoding: .utf8)!
-            print(str)
-            request.httpBody = requestJsonData
-        } catch {
-            print(error)
-        }
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            let historyRecord = self.buildCompletionHistory(request: completionRequest, response: response, data: data, error: error)
-            if historyRecord != nil {
-                self.completionHistory.insert(historyRecord!, at: 0)
+        var request = URLRequest(url: URL(string: "https://api.openai.com/v1/completions")!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpBody = toJsonData(encodable: completionRequest)
+        
+        AF
+            .request(request)
+            .responseData { (response: AFDataResponse<Data>) in
+                switch response.result {
+                case .failure(let error):
+                    print(error)
+                case .success(let data):
+                    let historyRecord = self.buildCompletionHistory(
+                        request: completionRequest,
+                        response: response,
+                        data: data,
+                        error: nil
+                    )
+                    self.completionHistory.insert(historyRecord, at: 0)
+                    completion(historyRecord)
+                }
             }
-            completion(historyRecord)
-        }
-        .resume()
     }
     
     func chatCompletions(prompt: String, completion:@escaping (ChatCompletionHistoryRecord?) -> ()) {
-        let url = URL(string: "https://api.openai.com/v1/chat/completions")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
         let completionRequest = ChatCompletionRequest(
-            model: chatCompletionModels[0],
-            messages: [
+            model: chatCompletionModel,
+            messages: buildChatMessageHistory(prompt: prompt),
+            max_tokens: maxTokens,
+            temperature: 0
+        )
+        print(completionRequest)
+        var request = URLRequest(url: URL(string: "https://api.openai.com/v1/chat/completions")!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpBody = toJsonData(encodable: completionRequest)
+        
+        AF
+            .request(request)
+            .responseData { (response: AFDataResponse<Data>) in
+                switch response.result {
+                case .failure(let error):
+                    print(error)
+                case .success(let data):
+                    let historyRecord = self.buildChatCompletionHistory(
+                        request: completionRequest,
+                        response: response,
+                        data: data,
+                        error: nil
+                    )
+                    self.chatCompletionHistory.insert(historyRecord, at: 0)
+                    completion(historyRecord)
+                }
+            }
+    }
+    
+    private func buildChatMessageHistory(prompt: String) -> [ChatCompletionMessage] {
+        if self.passChatHistory{
+            var history: [ChatCompletionMessage] = self.chatCompletionHistory
+                .reversed()
+                .filter({ record in
+                    record.request.messages.count > 0 && record.response != nil && record.response!.choices.count > 0
+                })
+                .flatMap({ record in
+                [
+                    ChatCompletionMessage(
+                        role: record.request.messages.last!.role,
+                        content: record.request.messages.last!.content
+                    ),
+                    ChatCompletionMessage(
+                        role: record.response!.choices.last!.message.role,
+                        content: record.response!.choices.last!.message.content
+                    )
+                ]
+            })
+            history.append(
                 ChatCompletionMessage(
                     role: "user",
                     content: prompt
                 )
-            ],
-            max_tokens: maxTokens,
-            temperature: 0
-        )
-        do {
-            let requestJsonData = try JSONEncoder().encode(completionRequest)
-            let str = String(data: requestJsonData, encoding: .utf8)!
-            print(str)
-            request.httpBody = requestJsonData
-        } catch {
-            print(error)
+            )
+            return history
         }
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            let historyRecord = self.buildChatCompletionHistory(request: completionRequest, response: response, data: data, error: error)
-            if historyRecord != nil {
-                self.chatCompletionHistory.insert(historyRecord!, at: 0)
-            }
-            completion(historyRecord)
-        }
-        .resume()
+        return [
+            ChatCompletionMessage(
+                role: "user",
+                content: prompt
+            )
+        ]
     }
     
     private func buildCompletionHistory(
         request: CompletionRequest,
-        response: URLResponse?,
+        response: AFDataResponse<Data>,
         data: Data?,
         error: Error?
-    ) -> CompletionHistoryRecord? {
+    ) -> CompletionHistoryRecord {
         if let error = error {
             print("dataTaskWithURL fail: \(error.localizedDescription)")
             return CompletionHistoryRecord(
@@ -106,7 +146,7 @@ class OpenAi : ObservableObject {
             )
         }
         else if let data = data {
-            if (response as! HTTPURLResponse).statusCode == 401 {
+            if response.response?.statusCode == 401 {
                 return CompletionHistoryRecord(
                     id: String(self.completionHistory.count),
                     request: request,
@@ -124,18 +164,28 @@ class OpenAi : ObservableObject {
                     error: nil
                 )
             } catch {
-                print(error)
+                return CompletionHistoryRecord(
+                    id: String(self.completionHistory.count),
+                    request: request,
+                    response: nil,
+                    error: error.localizedDescription
+                )
             }
         }
-        return nil
+        return CompletionHistoryRecord(
+            id: String(self.completionHistory.count),
+            request: request,
+            response: nil,
+            error: "Unknown Error"
+        )
     }
     
     private func buildChatCompletionHistory(
         request: ChatCompletionRequest,
-        response: URLResponse?,
+        response: AFDataResponse<Data>,
         data: Data?,
         error: Error?
-    ) -> ChatCompletionHistoryRecord? {
+    ) -> ChatCompletionHistoryRecord {
         if let error = error {
             print("dataTaskWithURL fail: \(error.localizedDescription)")
             return ChatCompletionHistoryRecord(
@@ -146,7 +196,7 @@ class OpenAi : ObservableObject {
             )
         }
         else if let data = data {
-            if (response as! HTTPURLResponse).statusCode == 401 {
+            if response.response?.statusCode == 401 {
                 return ChatCompletionHistoryRecord(
                     id: String(self.chatCompletionHistory.count),
                     request: request,
@@ -164,10 +214,20 @@ class OpenAi : ObservableObject {
                     error: nil
                 )
             } catch {
-                print(error)
+                return ChatCompletionHistoryRecord(
+                    id: String(self.chatCompletionHistory.count),
+                    request: request,
+                    response: nil,
+                    error: error.localizedDescription
+                )
             }
         }
-        return nil
+        return ChatCompletionHistoryRecord(
+            id: String(self.chatCompletionHistory.count),
+            request: request,
+            response: nil,
+            error: "Unknown Error"
+        )
     }
     
     func clearCompletionHistory() {
@@ -178,16 +238,45 @@ class OpenAi : ObservableObject {
         chatCompletionHistory.removeAll()
     }
     
+    private func toJsonData(encodable: Encodable) -> Data {
+        return toJson(encodable: encodable).data(using: .utf8)!
+    }
+    
+    private func toJson(encodable: Encodable) -> String {
+        do {
+            let json = try JSONEncoder().encode(encodable)
+            return String(data: json, encoding: .utf8)!
+        } catch {
+            return ""
+        }
+    }
+    
 }
 
-let chatCompletionModels = [
-    "gpt-3.5-turbo"
+let CHAT_COMPLETION_MODEL_DEFAULT = "gpt-3.5-turbo"
+let CHAT_COMPLETION_MODELS = [
+    "gpt-4",
+    "gpt-4-0314",
+    "gpt-4-32k",
+    "gpt-4-32k-0314",
+    "gpt-3.5-turbo",
+    "gpt-3.5-turbo-0301"
 ]
-let completionModels = [
-    "text-davinci-003"
+let COMPLETION_MODEL_DEFAULT = "text-davinci-003"
+let COMPLETION_MODELS = [
+    "text-davinci-003",
+    "text-davinci-002",
+    "text-curie-001",
+    "text-babbage-001",
+    "text-ada-001",
+    "davinci",
+    "curie",
+    "babbage",
+    "ada"
 ]
 
 
+// Chat GPT 3.0
 struct CompletionRequest: Codable {
     let model: String
     let prompt: String

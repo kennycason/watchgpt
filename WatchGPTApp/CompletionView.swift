@@ -40,12 +40,13 @@ struct CompletionInputView: View {
                     }
                 }
             
-            Group {
-                if isLoading {
+            if isLoading {
+                Group {
                     Text("Loading...")
                         .bold()
                 }
             }
+            
         }
     }
 }
