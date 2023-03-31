@@ -14,3 +14,9 @@ Open WatchGPT.workspace in XCode > Run
 ## Screenshots
 
 <img src="https://github.com/kennycason/watchgpt/blob/main/sceenshots/chatgpt3.5.png?raw=true" width="33%" alt="ChatGPT3.5"/><img src="https://github.com/kennycason/watchgpt/blob/main/sceenshots/short_story01.png?raw=true" width="33%" alt="ChatGPT3.0" /><img src="https://github.com/kennycason/watchgpt/blob/main/sceenshots/settings.png?raw=true" width="33%" alt="Settings"/>
+
+<img src="https://github.com/kennycason/watchgpt/blob/main/sceenshots/texttospeech.png?raw=true" width="50%" alt="Settings"/>
+
+## Text-to-Speech
+
+https://v.usetapes.com/9RNUl8QGKZ

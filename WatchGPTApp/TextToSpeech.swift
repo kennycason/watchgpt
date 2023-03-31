@@ -22,20 +22,15 @@ class TextToSpeech {
     }
 
     func speak(text: String) {
-        // Create an utterance.
         let utterance = AVSpeechUtterance(string: text)
+//        utterance.rate = 0.57
+//        utterance.pitchMultiplier = 0.8
+//        utterance.postUtteranceDelay = 0.2
+//        utterance.volume = 0.8
 
-        // Configure the utterance.
-//                    utterance.rate = 0.57
-//                    utterance.pitchMultiplier = 0.8
-//                    utterance.postUtteranceDelay = 0.2
-//                    utterance.volume = 0.8
-
-        // Retrieve the American English voice.
-        // TODO perform language detection
-        let voice = AVSpeechSynthesisVoice(language: "en-US")
-
-        // Assign the voice to the utterance.
+        let languageDetector = LanguageDetector()
+        let language = languageDetector.detect(text: text)
+        let voice = AVSpeechSynthesisVoice(language: language)
         utterance.voice = voice
         
         synthesizer.speak(utterance)
