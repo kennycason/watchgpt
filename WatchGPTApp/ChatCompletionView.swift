@@ -2,16 +2,18 @@
 //  Created by Kenny Cason on 3/18/23.
 //
 import SwiftUI
+import AVFoundation
 
 struct ChatCompletionView: View {
     @EnvironmentObject var openAi: OpenAi
+    private let textToSpeech = TextToSpeech()
     
     var body: some View {
         VStack(alignment: .leading) {
             ChatCompletionInputView()
                 .environmentObject(openAi)
             
-            ChatCompletionHistoryView()
+            ChatCompletionHistoryView(textToSpeech: textToSpeech)
                 .environmentObject(openAi)
         }
         .frame(maxWidth: .infinity)
@@ -52,17 +54,24 @@ struct ChatCompletionInputView: View {
 }
 
 struct ChatCompletionHistoryView: View {
+    let textToSpeech: TextToSpeech
     @EnvironmentObject var openAi: OpenAi
+    
     var body: some View {
         List(openAi.chatCompletionHistory) { record in
-            ChatCompletionHistoryRecordView(record: record)
+            ChatCompletionHistoryRecordView(
+                record: record,
+                textToSpeech: textToSpeech
+            )
         }
         .listStyle(.elliptical)
     }
 }
 
 struct ChatCompletionHistoryRecordView: View {
-    var record: ChatCompletionHistoryRecord
+    let record: ChatCompletionHistoryRecord
+    let textToSpeech: TextToSpeech
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(record.request.messages.last!.content)
@@ -78,8 +87,18 @@ struct ChatCompletionHistoryRecordView: View {
                     .foregroundColor(.red)
             }
             else if (record.response != nil) {
-                Text(record.response!.choices[0].message.content.trimmingCharacters(in: ["\n", " "]))
-                    .fixedSize(horizontal: false, vertical: false)
+                VStack(alignment: .leading) {
+                    Text(record.response!.choices[0].message.content.trimmingCharacters(in: ["\n", " "]))
+                        .fixedSize(horizontal: false, vertical: false)
+                    Button(action: {
+                        textToSpeech.speak(text: record.response!.choices[0].message.content)
+                    }) {
+                        Text("🔊")
+                            .padding()
+                            .cornerRadius(5)
+                    }
+                    .buttonStyle(.borderless)
+                }
             }
         }
     }
