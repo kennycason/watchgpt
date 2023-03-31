@@ -31,7 +31,8 @@ class TextToSpeech {
 //                    utterance.postUtteranceDelay = 0.2
 //                    utterance.volume = 0.8
 
-        // Retrieve the British English voice.
+        // Retrieve the American English voice.
+        // TODO perform language detection
         let voice = AVSpeechSynthesisVoice(language: "en-US")
 
         // Assign the voice to the utterance.
