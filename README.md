@@ -19,4 +19,4 @@ Open WatchGPT.workspace in XCode > Run
 
 ## Text-to-Speech
 
-https://v.usetapes.com/9RNUl8QGKZ
+https://v.usetapes.com/X3JelR2dtC
