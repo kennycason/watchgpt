@@ -65,7 +65,7 @@ struct ChatCompletionHistoryRecordView: View {
     var record: ChatCompletionHistoryRecord
     var body: some View {
         VStack(alignment: .leading) {
-            Text(record.request.messages[0].content)
+            Text(record.request.messages.last!.content)
                 .fontWeight(.light)
                 .italic()
                 .foregroundColor(.white)
