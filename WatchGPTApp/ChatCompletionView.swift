@@ -90,14 +90,27 @@ struct ChatCompletionHistoryRecordView: View {
                 VStack(alignment: .leading) {
                     Text(record.response!.choices[0].message.content.trimmingCharacters(in: ["\n", " "]))
                         .fixedSize(horizontal: false, vertical: false)
-                    Button(action: {
-                        textToSpeech.speak(text: record.response!.choices[0].message.content)
-                    }) {
-                        Text("🔊")
-                            .padding()
-                            .cornerRadius(5)
+                    HStack {
+                        Button(action: {
+                            if (!textToSpeech.isSpeaking()) {
+                                textToSpeech.speak(text: record.response!.choices[0].message.content)
+                            }
+                        }) {
+                            Text("🔊")
+                                .padding()
+                                .cornerRadius(5)
+                        }
+                        .buttonStyle(.borderless)
+                        Spacer()
+                        Button(action: {
+                            textToSpeech.stopSpeaking()
+                        }) {
+                            Text("🔇")
+                                .padding()
+                                .cornerRadius(5)
+                        }
+                        .buttonStyle(.borderless)
                     }
-                    .buttonStyle(.borderless)
                 }
             }
         }

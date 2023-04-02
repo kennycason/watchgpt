@@ -32,5 +32,13 @@
       <ContextState
          contextName = "WatchGPTApp.body.getter:WatchGPTApp.swift">
       </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in closure #1 in ChatCompletionHistoryRecordView.body.getter:ChatCompletionView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "textToSpeech.isSpeaking()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -20,13 +20,23 @@ class TextToSpeech {
             print("Fail to enable AVAudioSession")
         }
     }
+    
+    func stopSpeaking() {
+        if (isSpeaking()) {
+            synthesizer.stopSpeaking(at: .immediate)
+        }
+    }
 
+    func isSpeaking() -> Bool {
+        return synthesizer.isSpeaking
+    }
+    
     func speak(text: String) {
         let utterance = AVSpeechUtterance(string: text)
 //        utterance.rate = 0.57
 //        utterance.pitchMultiplier = 0.8
 //        utterance.postUtteranceDelay = 0.2
-//        utterance.volume = 0.8
+        utterance.volume = 1.0
 
         let languageDetector = LanguageDetector()
         let language = languageDetector.detect(text: text)
